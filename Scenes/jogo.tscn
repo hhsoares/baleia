@@ -1,0 +1,391 @@
+[gd_scene load_steps=20 format=3 uid="uid://b1fubdrav3781"]
+
+[ext_resource type="Texture2D" uid="uid://c8ntm4wyk0c23" path="res://Assets/Ellipse 55.png" id="1_wu4wd"]
+[ext_resource type="Texture2D" uid="uid://b1h2v5bhhuwom" path="res://Assets/nuvem (1).png" id="2_82dp6"]
+[ext_resource type="Texture2D" uid="uid://bn8va1u0g8xt5" path="res://Assets/barco.png" id="3_rokwo"]
+[ext_resource type="PackedScene" uid="uid://owrnf5jvokw0" path="res://prefarbs/baleia.tscn" id="3_ru4ac"]
+[ext_resource type="Texture2D" uid="uid://cm1tcoqqyvn7m" path="res://Assets/ondas_escondidas.png" id="5_8ihgy"]
+[ext_resource type="Texture2D" uid="uid://cybgjfqxrdpyc" path="res://Assets/corrimão.png" id="6_exr17"]
+[ext_resource type="Texture2D" uid="uid://d1xewiphuvulm" path="res://Assets/ondas_simples.png" id="6_nyb5w"]
+[ext_resource type="Texture2D" uid="uid://2b26ied1oxvo" path="res://Assets/HUD-ElementsBG.png" id="7_8ihgy"]
+[ext_resource type="Texture2D" uid="uid://hc2a7awsveqb" path="res://Assets/HUD-Elements.png" id="8_cwcib"]
+[ext_resource type="Texture2D" uid="uid://ctkn1liictg6b" path="res://Assets/HUD-pause.png" id="9_4aaip"]
+[ext_resource type="Texture2D" uid="uid://dndy10h7hwcpo" path="res://Assets/btn_baleia.png" id="10_gyvnm"]
+[ext_resource type="Texture2D" uid="uid://7w5j5f8awf8t" path="res://Assets/Bolas-de-canhoes.png" id="11_ru4ac"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_i1hro"]
+
+[sub_resource type="Animation" id="Animation_cwcib"]
+resource_name = "movimento"
+length = 5.0
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("OndasSimples:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.2, 2.5333333, 3.9, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(436, 532), Vector2(461.579, 537), Vector2(490, 532), Vector2(461.579, 537), Vector2(436, 532)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("OndasSimples2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1, 1.4, 3, 4.2000003, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1555, 820), Vector2(1577.345, 812.931), Vector2(1609, 815), Vector2(1577.345, 812.931), Vector2(1555, 820)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("OndasEscondidas:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.1, 2.2, 3.5, 4.9678354),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(998.99994, 676), Vector2(1014, 684), Vector2(998.99994, 692), Vector2(1014, 684), Vector2(998.99994, 676)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Barco:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 2.6, 5, 6.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(967, 288.00003), Vector2(977, 288), Vector2(967, 288.00003), Vector2(977, 288.00003)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Barco:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.6, 1.6, 2.6010835, 3.6010835, 4.616338, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.06981317007977318, -0.06981317007977318, 0.06981317007977318, -0.06981317007977318, 0.06981317007977318, 0.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("baleia:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1.2, 2.5, 3.6907268, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1049, 559), Vector2(1049, 588), Vector2(1049, 559), Vector2(1049, 588), Vector2(1049, 559)]
+}
+
+[sub_resource type="Animation" id="Animation_4aaip"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("OndasSimples:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(436, 532)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("OndasSimples2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1555, 820)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("OndasEscondidas:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(998.99994, 676)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Barco:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(977, 288.00003)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Barco:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.11236833]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("baleia:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1049, 559)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gyvnm"]
+_data = {
+&"RESET": SubResource("Animation_4aaip"),
+&"movimento": SubResource("Animation_cwcib")
+}
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ru4ac"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1untg"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ru4ac"]
+load_path = "res://.godot/imported/Capa (1).png-6a538d5768dbd25f7d272811d7760e75.ctex"
+
+[node name="jogo" type="Node2D"]
+
+[node name="bgs" type="Node2D" parent="."]
+
+[node name="bg-ceu" type="Sprite2D" parent="bgs"]
+modulate = Color(0.61960787, 0.85490197, 0.92156863, 1)
+position = Vector2(989.25, 539.25)
+scale = Vector2(1979.4999, 1079.5)
+texture = SubResource("CanvasTexture_i1hro")
+
+[node name="bg-mar" type="Sprite2D" parent="bgs"]
+modulate = Color(0.29803923, 0.6156863, 0.9137255, 1)
+position = Vector2(990, 818)
+scale = Vector2(4.2260003, 1.796)
+texture = ExtResource("1_wu4wd")
+
+[node name="bg-mar2" type="Sprite2D" parent="bgs"]
+modulate = Color(0.29803923, 0.6156863, 0.9137255, 1)
+position = Vector2(989, 869.99994)
+scale = Vector2(1979.9999, 418.00003)
+texture = SubResource("CanvasTexture_i1hro")
+
+[node name="Barco" type="Sprite2D" parent="bgs"]
+position = Vector2(977, 288.00003)
+rotation = 0.11236833
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_rokwo")
+
+[node name="baleia" parent="bgs" instance=ExtResource("3_ru4ac")]
+position = Vector2(1049, 559)
+rotation = 0.17080888
+scale = Vector2(0.6, 0.6)
+
+[node name="OndasEscondidas" type="Sprite2D" parent="bgs"]
+position = Vector2(998.99994, 676)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("5_8ihgy")
+
+[node name="OndasSimples" type="Sprite2D" parent="bgs"]
+position = Vector2(436, 532)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("6_nyb5w")
+
+[node name="OndasSimples2" type="Sprite2D" parent="bgs"]
+position = Vector2(1555, 820)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_nyb5w")
+
+[node name="Corrimão" type="Sprite2D" parent="bgs"]
+position = Vector2(989.7197, 1030)
+scale = Vector2(3.6873813, 3.2432404)
+texture = ExtResource("6_exr17")
+
+[node name="nuvens" type="Node2D" parent="bgs"]
+
+[node name="Nuvem(1)" type="Sprite2D" parent="bgs/nuvens"]
+position = Vector2(224, 85.99999)
+scale = Vector2(0.29310343, 0.29310346)
+texture = ExtResource("2_82dp6")
+
+[node name="Nuvem(1)7" type="Sprite2D" parent="bgs/nuvens"]
+position = Vector2(593, 136)
+scale = Vector2(0.213048, 0.29310346)
+texture = ExtResource("2_82dp6")
+
+[node name="Nuvem(1)2" type="Sprite2D" parent="bgs/nuvens"]
+position = Vector2(88.99999, 342)
+scale = Vector2(0.2783251, 0.2783251)
+texture = ExtResource("2_82dp6")
+
+[node name="Nuvem(1)3" type="Sprite2D" parent="bgs/nuvens"]
+position = Vector2(127, 338)
+scale = Vector2(0.2783251, 0.2783251)
+texture = ExtResource("2_82dp6")
+
+[node name="Nuvem(1)4" type="Sprite2D" parent="bgs/nuvens"]
+position = Vector2(1508, 86)
+scale = Vector2(0.29310343, 0.29310346)
+texture = ExtResource("2_82dp6")
+
+[node name="Nuvem(1)5" type="Sprite2D" parent="bgs/nuvens"]
+position = Vector2(1799.4126, 353.75)
+scale = Vector2(0.2783251, 0.2783251)
+texture = ExtResource("2_82dp6")
+
+[node name="Nuvem(1)6" type="Sprite2D" parent="bgs/nuvens"]
+position = Vector2(1820.9999, 353)
+scale = Vector2(0.2783251, 0.2783251)
+texture = ExtResource("2_82dp6")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="bgs"]
+libraries = {
+&"": SubResource("AnimationLibrary_gyvnm")
+}
+autoplay = "movimento"
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="HUD"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HudLife" type="Sprite2D" parent="HUD/Control"]
+position = Vector2(184, 87)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("7_8ihgy")
+region_enabled = true
+region_rect = Rect2(0, 0, 387.7402, 162.78221)
+
+[node name="HudElements" type="Sprite2D" parent="HUD/Control/HudLife"]
+position = Vector2(-107.5, -1.25)
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("8_cwcib")
+hframes = 3
+
+[node name="txt_life" type="Label" parent="HUD/Control/HudLife"]
+offset_left = -13.749992
+offset_top = -31.249996
+offset_right = 44.250008
+offset_bottom = 23.750004
+theme_override_font_sizes/font_size = 40
+text = "X 3"
+
+[node name="HudScore" type="Sprite2D" parent="HUD/Control"]
+position = Vector2(1796.9999, 87)
+scale = Vector2(-0.8, -0.8)
+texture = ExtResource("7_8ihgy")
+region_enabled = true
+region_rect = Rect2(0, 0, 388.80377, 163)
+
+[node name="HudElements2" type="Sprite2D" parent="HUD/Control/HudScore"]
+position = Vector2(-115.00015, 1.25)
+rotation = 3.1415927
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("8_cwcib")
+hframes = 3
+frame = 1
+
+[node name="txt_score" type="Label" parent="HUD/Control/HudScore"]
+offset_left = 112.49984
+offset_top = 27.499992
+offset_right = 203.49985
+offset_bottom = 82.49999
+scale = Vector2(-1, -1)
+theme_override_font_sizes/font_size = 40
+text = "0000"
+
+[node name="btn_pause" type="Button" parent="HUD/Control"]
+layout_mode = 0
+offset_left = 905.0
+offset_top = 30.0
+offset_right = 1041.0
+offset_bottom = 166.0
+scale = Vector2(0.65, 0.65)
+theme_override_icons/icon = ExtResource("9_4aaip")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ru4ac")
+icon_alignment = 1
+expand_icon = true
+
+[node name="btn_pause2" type="Button" parent="HUD/Control"]
+layout_mode = 0
+offset_left = 1797.0
+offset_top = 905.0
+offset_right = 1922.9231
+offset_bottom = 1030.9231
+pivot_offset = Vector2(64, 64)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_1untg")
+icon = ExtResource("10_gyvnm")
+icon_alignment = 1
+expand_icon = true
+
+[node name="limite_dos_tiros" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 0.43137255)
+position = Vector2(990, 540)
+scale = Vector2(0.92415947, 0.582343)
+texture = SubResource("CompressedTexture2D_ru4ac")
+
+[node name="BolasDeCanhoes" type="Sprite2D" parent="limite_dos_tiros"]
+position = Vector2(840.95593, -593.9706)
+scale = Vector2(1.0440173, 1.6568216)
+texture = ExtResource("11_ru4ac")
+region_enabled = true
+region_rect = Rect2(0, 0, 127.67508, 125)
+
+[node name="BolasDeCanhoes2" type="Sprite2D" parent="limite_dos_tiros"]
+position = Vector2(840.95593, 584.0296)
+scale = Vector2(1.0440173, 1.6568216)
+texture = ExtResource("11_ru4ac")
+region_enabled = true
+region_rect = Rect2(0, 0, 127.67508, 125)
+
+[node name="BolasDeCanhoes3" type="Sprite2D" parent="limite_dos_tiros"]
+position = Vector2(-842, 582.37274)
+scale = Vector2(1.0440173, 1.6568216)
+texture = ExtResource("11_ru4ac")
+region_enabled = true
+region_rect = Rect2(0, 0, 127.67508, 125)
+
+[node name="BolasDeCanhoes4" type="Sprite2D" parent="limite_dos_tiros"]
+position = Vector2(-840.956, -587.34326)
+scale = Vector2(1.0440173, 1.6568216)
+texture = ExtResource("11_ru4ac")
+region_enabled = true
+region_rect = Rect2(0, 0, 127.67508, 125)

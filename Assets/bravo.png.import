@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0k1j1v5fc53o"
-path="res://.godot/imported/Mouse-effect.png-c589c3293502a8fb1ac43ed512073582.ctex"
+uid="uid://dufjb8ehcf7cb"
+path="res://.godot/imported/bravo.png-00bf06eb8a1f6f16a65a996e850cb3bf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Mouse-effect.png"
-dest_files=["res://.godot/imported/Mouse-effect.png-c589c3293502a8fb1ac43ed512073582.ctex"]
+source_file="res://Assets/bravo.png"
+dest_files=["res://.godot/imported/bravo.png-00bf06eb8a1f6f16a65a996e850cb3bf.ctex"]
 
 [params]
 

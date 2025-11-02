@@ -1,0 +1,56 @@
+[gd_scene load_steps=2 format=3 uid="uid://44yc4xnxksm1"]
+
+[ext_resource type="Texture2D" uid="uid://bc8ko5rlvpn73" path="res://Assets/Tela-quando-perde.png" id="1_4ap6h"]
+
+[node name="Derrota" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_4ap6h")
+
+[node name="txt_score" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1260.0
+offset_top = 125.0
+offset_right = 1666.0
+offset_bottom = 300.0
+theme_override_font_sizes/font_size = 128
+text = "SCORE"
+
+[node name="value_score" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1385.0
+offset_top = 300.0
+offset_right = 1604.0
+offset_bottom = 432.0
+theme_override_font_sizes/font_size = 96
+text = "0000"
+
+[node name="btn_again" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1408.0
+offset_top = 472.0
+offset_right = 1416.0
+offset_bottom = 480.0
+theme_override_font_sizes/font_size = 64
+text = "AGAIN"
+
+[node name="btn_menu" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1408.0
+offset_top = 628.0
+offset_right = 1617.0
+offset_bottom = 724.0
+theme_override_font_sizes/font_size = 64
+text = "MENU"

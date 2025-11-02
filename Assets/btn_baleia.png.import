@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hc2a7awsveqb"
-path="res://.godot/imported/HUD-Elements.png-376de6c17a1659fe46c7b20e4f703007.ctex"
+uid="uid://dndy10h7hwcpo"
+path="res://.godot/imported/btn_baleia.png-521540c414a5fc33dddf42eaaeaf1555.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/HUD-Elements.png"
-dest_files=["res://.godot/imported/HUD-Elements.png-376de6c17a1659fe46c7b20e4f703007.ctex"]
+source_file="res://Assets/btn_baleia.png"
+dest_files=["res://.godot/imported/btn_baleia.png-521540c414a5fc33dddf42eaaeaf1555.ctex"]
 
 [params]
 
