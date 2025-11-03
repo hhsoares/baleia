@@ -1,5 +1,6 @@
-[gd_scene load_steps=20 format=3 uid="uid://b1fubdrav3781"]
+[gd_scene load_steps=21 format=3 uid="uid://b1fubdrav3781"]
 
+[ext_resource type="Script" uid="uid://r83rrsw150n" path="res://Scripts/jogo.gd" id="1_1untg"]
 [ext_resource type="Texture2D" uid="uid://c8ntm4wyk0c23" path="res://Assets/Ellipse 55.png" id="1_wu4wd"]
 [ext_resource type="Texture2D" uid="uid://b1h2v5bhhuwom" path="res://Assets/nuvem (1).png" id="2_82dp6"]
 [ext_resource type="Texture2D" uid="uid://bn8va1u0g8xt5" path="res://Assets/barco.png" id="3_rokwo"]
@@ -14,6 +15,81 @@
 [ext_resource type="Texture2D" uid="uid://7w5j5f8awf8t" path="res://Assets/Bolas-de-canhoes.png" id="11_ru4ac"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_i1hro"]
+
+[sub_resource type="Animation" id="Animation_4aaip"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("OndasSimples:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(436, 532)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("OndasSimples2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1555, 820)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("OndasEscondidas:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(998.99994, 676)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Barco:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(977, 288.00003)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Barco:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.11236833]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("baleia:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1049, 559)]
+}
 
 [sub_resource type="Animation" id="Animation_cwcib"]
 resource_name = "movimento"
@@ -93,81 +169,6 @@ tracks/5/keys = {
 "values": [Vector2(1049, 559), Vector2(1049, 588), Vector2(1049, 559), Vector2(1049, 588), Vector2(1049, 559)]
 }
 
-[sub_resource type="Animation" id="Animation_4aaip"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("OndasSimples:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(436, 532)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("OndasSimples2:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1555, 820)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("OndasEscondidas:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(998.99994, 676)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Barco:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(977, 288.00003)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Barco:rotation")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.11236833]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("baleia:position")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1049, 559)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_gyvnm"]
 _data = {
 &"RESET": SubResource("Animation_4aaip"),
@@ -179,9 +180,9 @@ _data = {
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1untg"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ru4ac"]
-load_path = "res://.godot/imported/Capa (1).png-6a538d5768dbd25f7d272811d7760e75.ctex"
 
 [node name="jogo" type="Node2D"]
+script = ExtResource("1_1untg")
 
 [node name="bgs" type="Node2D" parent="."]
 
@@ -286,6 +287,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="HudLife" type="Sprite2D" parent="HUD/Control"]
 position = Vector2(184, 87)
