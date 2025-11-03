@@ -7,6 +7,7 @@
 radius = 64.00781
 
 [node name="Bola" type="CharacterBody2D"]
+input_pickable = true
 script = ExtResource("1_78ayt")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

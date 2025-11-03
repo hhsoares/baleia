@@ -11,3 +11,7 @@ func _physics_process(delta: float) -> void:
 	
 	if position.y > get_viewport_rect().size.y:
 		queue_free()
+
+func _input_event(viewport: Viewport, event: InputEvent, shape_idx: int) -> void:
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		queue_free()
