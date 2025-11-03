@@ -11,6 +11,7 @@ var _rng := RandomNumberGenerator.new()
 var _t: Timer
 
 func _ready() -> void:
+	Globals.life <= 3
 	_rng.randomize()
 	_t = Timer.new()
 	_t.one_shot = false
@@ -21,6 +22,9 @@ func _ready() -> void:
 
 func _process(_delta: float) -> void:
 	txt_score.text = str(Globals.score)
+	
+	if Globals.life <= 0:
+		get_tree().change_scene_to_file("res://Scenes/derrota.tscn")
 
 func _spawn_one() -> void:
 	var vp_size := get_viewport_rect().size
