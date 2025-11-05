@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://b1fubdrav3781"]
+[gd_scene load_steps=24 format=3 uid="uid://b1fubdrav3781"]
 
 [ext_resource type="Script" uid="uid://r83rrsw150n" path="res://Scripts/jogo.gd" id="1_1untg"]
 [ext_resource type="Texture2D" uid="uid://c8ntm4wyk0c23" path="res://Assets/Ellipse 55.png" id="1_wu4wd"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://2b26ied1oxvo" path="res://Assets/HUD-ElementsBG.png" id="7_8ihgy"]
 [ext_resource type="Texture2D" uid="uid://hc2a7awsveqb" path="res://Assets/HUD-Elements.png" id="8_cwcib"]
 [ext_resource type="Texture2D" uid="uid://ctkn1liictg6b" path="res://Assets/HUD-pause.png" id="9_4aaip"]
+[ext_resource type="PackedScene" uid="uid://dh30b8f5x3ubh" path="res://Scenes/pause.tscn" id="10_1ojdp"]
 [ext_resource type="Texture2D" uid="uid://dndy10h7hwcpo" path="res://Assets/btn_baleia.png" id="10_gyvnm"]
 [ext_resource type="Texture2D" uid="uid://7w5j5f8awf8t" path="res://Assets/Bolas-de-canhoes.png" id="11_ru4ac"]
 
@@ -273,6 +274,10 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
+[node name="pauseMenu" parent="HUD/Control" instance=ExtResource("10_1ojdp")]
+visible = false
+layout_mode = 1
+
 [node name="HudLife" type="Sprite2D" parent="HUD/Control"]
 position = Vector2(184, 87)
 scale = Vector2(0.8, 0.8)
@@ -383,4 +388,8 @@ region_rect = Rect2(0, 0, 127.67508, 125)
 position = Vector2(979.25, 1126)
 shape = SubResource("RectangleShape2D_1untg")
 
+[connection signal="pressed" from="HUD/Control/pauseMenu/Button" to="." method="unpause"]
+[connection signal="pressed" from="HUD/Control/btn_pause" to="." method="pause"]
 [connection signal="pressed" from="HUD/Control/btn_baleia" to="." method="_on_btn_baleia_pressed"]
+
+[editable path="HUD/Control/pauseMenu"]

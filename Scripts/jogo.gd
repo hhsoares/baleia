@@ -56,3 +56,11 @@ func _on_btn_baleia_pressed() -> void:
 	
 	await get_tree().create_timer(4.0).timeout
 	can_use_baleia = true
+
+func pause():
+	get_tree().paused = true
+	$HUD/Control/pauseMenu.show()
+
+func unpause():
+	$HUD/Control/pauseMenu.hide()
+	get_tree().paused = false
