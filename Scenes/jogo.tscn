@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://b1fubdrav3781"]
+[gd_scene load_steps=23 format=3 uid="uid://b1fubdrav3781"]
 
 [ext_resource type="Script" uid="uid://r83rrsw150n" path="res://Scripts/jogo.gd" id="1_1untg"]
 [ext_resource type="Texture2D" uid="uid://c8ntm4wyk0c23" path="res://Assets/Ellipse 55.png" id="1_wu4wd"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cm1tcoqqyvn7m" path="res://Assets/ondas_escondidas.png" id="5_8ihgy"]
 [ext_resource type="Texture2D" uid="uid://cybgjfqxrdpyc" path="res://Assets/corrimão.png" id="6_exr17"]
 [ext_resource type="Texture2D" uid="uid://d1xewiphuvulm" path="res://Assets/ondas_simples.png" id="6_nyb5w"]
+[ext_resource type="Texture2D" uid="uid://c4yfsysi44ics" path="res://Assets/splash-baleia.png" id="7_3lwpm"]
 [ext_resource type="Texture2D" uid="uid://2b26ied1oxvo" path="res://Assets/HUD-ElementsBG.png" id="7_8ihgy"]
 [ext_resource type="Texture2D" uid="uid://hc2a7awsveqb" path="res://Assets/HUD-Elements.png" id="8_cwcib"]
 [ext_resource type="Texture2D" uid="uid://ctkn1liictg6b" path="res://Assets/HUD-pause.png" id="9_4aaip"]
@@ -78,18 +79,6 @@ tracks/4/keys = {
 "update": 0,
 "values": [0.11236833]
 }
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("baleia:position")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1049, 559)]
-}
 
 [sub_resource type="Animation" id="Animation_cwcib"]
 resource_name = "movimento"
@@ -156,18 +145,6 @@ tracks/4/keys = {
 "update": 0,
 "values": [0.0, 0.06981317007977318, -0.06981317007977318, 0.06981317007977318, -0.06981317007977318, 0.06981317007977318, 0.0]
 }
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("baleia:position")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0, 1.2, 2.5, 3.6907268, 5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(1049, 559), Vector2(1049, 588), Vector2(1049, 559), Vector2(1049, 588), Vector2(1049, 559)]
-}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_gyvnm"]
 _data = {
@@ -213,11 +190,6 @@ rotation = 0.11236833
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("3_rokwo")
 
-[node name="baleia" parent="bgs" instance=ExtResource("3_ru4ac")]
-position = Vector2(1049, 559)
-rotation = 0.17080888
-scale = Vector2(0.6, 0.6)
-
 [node name="OndasEscondidas" type="Sprite2D" parent="bgs"]
 position = Vector2(998.99994, 676)
 scale = Vector2(0.7, 0.7)
@@ -232,6 +204,15 @@ texture = ExtResource("6_nyb5w")
 position = Vector2(1555, 820)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("6_nyb5w")
+
+[node name="baleia" parent="bgs" instance=ExtResource("3_ru4ac")]
+position = Vector2(953, 868)
+
+[node name="splash" type="Sprite2D" parent="bgs"]
+visible = false
+position = Vector2(904.00006, 392)
+rotation = -0.18653065
+texture = ExtResource("7_3lwpm")
 
 [node name="Corrimão" type="Sprite2D" parent="bgs"]
 position = Vector2(989.7197, 1030)

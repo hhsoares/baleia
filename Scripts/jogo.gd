@@ -8,6 +8,8 @@ const BALL_SCENE := preload("res://prefarbs/bola.tscn")
 @onready var txt_score: Label = $HUD/Control/HudScore/txt_score
 @onready var txt_life: Label = $HUD/Control/HudLife/txt_life
 
+@onready var splash: Sprite2D = $bgs/splash
+
 var _rng := RandomNumberGenerator.new()
 var _t: Timer
 var can_use_baleia := true
@@ -43,9 +45,14 @@ func _on_btn_baleia_pressed() -> void:
 	can_use_baleia = false
 	
 	await get_tree().create_timer(0.5).timeout
+	splash.visible = true
+	
 	for child in get_children():
 		if child is CharacterBody2D and child.scene_file_path == "res://prefarbs/bola.tscn":
 			child.queue_free()
 	
-	await get_tree().create_timer(5.0).timeout
+	await get_tree().create_timer(1.0).timeout
+	splash.visible = false
+	
+	await get_tree().create_timer(4.0).timeout
 	can_use_baleia = true
