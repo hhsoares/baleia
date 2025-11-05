@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://2b26ied1oxvo" path="res://Assets/HUD-ElementsBG.png" id="7_8ihgy"]
 [ext_resource type="Texture2D" uid="uid://hc2a7awsveqb" path="res://Assets/HUD-Elements.png" id="8_cwcib"]
 [ext_resource type="Texture2D" uid="uid://ctkn1liictg6b" path="res://Assets/HUD-pause.png" id="9_4aaip"]
-[ext_resource type="PackedScene" path="res://Scenes/pause.tscn" id="10_1ojdp"]
+[ext_resource type="PackedScene" uid="uid://dh30b8f5x3ubh" path="res://Scenes/pause.tscn" id="10_1ojdp"]
 [ext_resource type="Texture2D" uid="uid://dndy10h7hwcpo" path="res://Assets/btn_baleia.png" id="10_gyvnm"]
 [ext_resource type="Texture2D" uid="uid://7w5j5f8awf8t" path="res://Assets/Bolas-de-canhoes.png" id="11_ru4ac"]
 
