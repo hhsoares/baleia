@@ -6,12 +6,14 @@ const BALL_SCENE := preload("res://prefarbs/bola.tscn")
 @export var spawn_above: float = 16.0
 
 @onready var txt_score: Label = $HUD/Control/HudScore/txt_score
+@onready var txt_life: Label = $HUD/Control/HudLife/txt_life
 
 var _rng := RandomNumberGenerator.new()
 var _t: Timer
 
 func _ready() -> void:
-	Globals.life <= 3
+	Globals.life = 3
+	Globals.score = 0
 	_rng.randomize()
 	_t = Timer.new()
 	_t.one_shot = false
@@ -22,6 +24,7 @@ func _ready() -> void:
 
 func _process(_delta: float) -> void:
 	txt_score.text = str(Globals.score)
+	txt_life.text = "x" + str(Globals.life)
 	
 	if Globals.life <= 0:
 		get_tree().change_scene_to_file("res://Scenes/derrota.tscn")
