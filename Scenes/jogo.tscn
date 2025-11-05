@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://2b26ied1oxvo" path="res://Assets/HUD-ElementsBG.png" id="7_8ihgy"]
 [ext_resource type="Texture2D" uid="uid://hc2a7awsveqb" path="res://Assets/HUD-Elements.png" id="8_cwcib"]
 [ext_resource type="Texture2D" uid="uid://ctkn1liictg6b" path="res://Assets/HUD-pause.png" id="9_4aaip"]
-[ext_resource type="PackedScene" uid="uid://dh30b8f5x3ubh" path="res://Scenes/pause.tscn" id="10_1ojdp"]
+[ext_resource type="PackedScene" path="res://Scenes/pause.tscn" id="10_1ojdp"]
 [ext_resource type="Texture2D" uid="uid://dndy10h7hwcpo" path="res://Assets/btn_baleia.png" id="10_gyvnm"]
 [ext_resource type="Texture2D" uid="uid://7w5j5f8awf8t" path="res://Assets/Bolas-de-canhoes.png" id="11_ru4ac"]
 
@@ -191,6 +191,18 @@ rotation = 0.11236833
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("3_rokwo")
 
+[node name="splash" type="Sprite2D" parent="bgs"]
+visible = false
+position = Vector2(976, 303.99997)
+rotation = -0.18653065
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("7_3lwpm")
+
+[node name="baleia" parent="bgs" instance=ExtResource("3_ru4ac")]
+position = Vector2(1024.0001, 569)
+rotation = 0.18870872
+scale = Vector2(0.6, 0.6)
+
 [node name="OndasEscondidas" type="Sprite2D" parent="bgs"]
 position = Vector2(998.99994, 676)
 scale = Vector2(0.7, 0.7)
@@ -205,15 +217,6 @@ texture = ExtResource("6_nyb5w")
 position = Vector2(1555, 820)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("6_nyb5w")
-
-[node name="baleia" parent="bgs" instance=ExtResource("3_ru4ac")]
-position = Vector2(953, 868)
-
-[node name="splash" type="Sprite2D" parent="bgs"]
-visible = false
-position = Vector2(904.00006, 392)
-rotation = -0.18653065
-texture = ExtResource("7_3lwpm")
 
 [node name="Corrimão" type="Sprite2D" parent="bgs"]
 position = Vector2(989.7197, 1030)
@@ -341,6 +344,7 @@ offset_left = 1797.0
 offset_top = 905.0
 offset_right = 1922.9231
 offset_bottom = 1030.9231
+scale = Vector2(1.4, 1.4)
 pivot_offset = Vector2(64, 64)
 theme_override_styles/normal = SubResource("StyleBoxEmpty_1untg")
 icon = ExtResource("10_gyvnm")

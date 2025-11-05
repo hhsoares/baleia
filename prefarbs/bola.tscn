@@ -1,7 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://myd602ayrwyh"]
+[gd_scene load_steps=4 format=3 uid="uid://c2e2n0pxed3wt"]
 
 [ext_resource type="Script" uid="uid://bhq8bsyqs6cak" path="res://Scripts/bola.gd" id="1_78ayt"]
-[ext_resource type="Texture2D" uid="uid://wm7dnwtfsdym" path="res://icon.svg" id="1_ccori"]
+[ext_resource type="Texture2D" uid="uid://7w5j5f8awf8t" path="res://Assets/Bolas-de-canhoes.png" id="2_78ayt"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_78ayt"]
 radius = 64.00781
@@ -11,7 +11,9 @@ input_pickable = true
 script = ExtResource("1_78ayt")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_ccori")
+texture = ExtResource("2_78ayt")
+region_enabled = true
+region_rect = Rect2(152, 0.5, 136, 124.432205)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_78ayt")
