@@ -10,6 +10,7 @@ const BALL_SCENE := preload("res://prefarbs/bola.tscn")
 
 var _rng := RandomNumberGenerator.new()
 var _t: Timer
+var can_use_baleia := true
 
 func _ready() -> void:
 	Globals.life = 3
@@ -35,3 +36,16 @@ func _spawn_one() -> void:
 	var ball := BALL_SCENE.instantiate()
 	ball.position = Vector2(x, -spawn_above)
 	add_child(ball)
+
+func _on_btn_baleia_pressed() -> void:
+	if not can_use_baleia:
+		return
+	can_use_baleia = false
+	
+	await get_tree().create_timer(0.5).timeout
+	for child in get_children():
+		if child is CharacterBody2D and child.scene_file_path == "res://prefarbs/bola.tscn":
+			child.queue_free()
+	
+	await get_tree().create_timer(5.0).timeout
+	can_use_baleia = true

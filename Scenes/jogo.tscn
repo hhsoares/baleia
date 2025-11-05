@@ -349,7 +349,7 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_ru4ac")
 icon_alignment = 1
 expand_icon = true
 
-[node name="btn_pause2" type="Button" parent="HUD/Control"]
+[node name="btn_baleia" type="Button" parent="HUD/Control"]
 layout_mode = 0
 offset_left = 1797.0
 offset_top = 905.0
@@ -362,6 +362,7 @@ icon_alignment = 1
 expand_icon = true
 
 [node name="limite_dos_tiros" type="Sprite2D" parent="."]
+visible = false
 modulate = Color(0, 0, 0, 0.43137255)
 position = Vector2(990, 540)
 scale = Vector2(0.92415947, 0.582343)
@@ -400,3 +401,5 @@ region_rect = Rect2(0, 0, 127.67508, 125)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="limite"]
 position = Vector2(979.25, 1126)
 shape = SubResource("RectangleShape2D_1untg")
+
+[connection signal="pressed" from="HUD/Control/btn_baleia" to="." method="_on_btn_baleia_pressed"]
