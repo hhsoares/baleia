@@ -9,6 +9,8 @@ const BALL_SCENE := preload("res://prefarbs/bola.tscn")
 @onready var txt_life: Label = $HUD/Control/HudLife/txt_life
 
 @onready var splash: Sprite2D = $bgs/splash
+@onready var baleia: Node2D = $bgs/baleia
+
 
 var _rng := RandomNumberGenerator.new()
 var _t: Timer
@@ -24,6 +26,7 @@ func _ready() -> void:
 	add_child(_t)
 	_t.timeout.connect(_spawn_one)
 	_t.start()
+	
 
 func _process(_delta: float) -> void:
 	txt_score.text = str(Globals.score)
@@ -44,6 +47,9 @@ func _on_btn_baleia_pressed() -> void:
 		return
 	can_use_baleia = false
 	
+	var anim_baleia = baleia.get_node("AnimationPlayer")
+	anim_baleia.play("ta_bravo")
+	
 	await get_tree().create_timer(0.5).timeout
 	splash.visible = true
 	
@@ -52,6 +58,7 @@ func _on_btn_baleia_pressed() -> void:
 			child.queue_free()
 	
 	await get_tree().create_timer(1.0).timeout
+	anim_baleia.play("idle")
 	splash.visible = false
 	
 	await get_tree().create_timer(4.0).timeout

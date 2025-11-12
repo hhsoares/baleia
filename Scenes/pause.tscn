@@ -1,8 +1,13 @@
-[gd_scene load_steps=0 format=3 uid="uid://dh30b8f5x3ubh"]
+[gd_scene format=3 uid="uid://dh30b8f5x3ubh"]
 
 [node name="pauseMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 0
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1980.0
+offset_bottom = 1080.0
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
