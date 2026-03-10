@@ -24,9 +24,9 @@ texture = ExtResource("1_1rerr")
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
 offset_left = 856.0
-offset_top = 446.0
+offset_top = 485.0
 offset_right = 1063.0
-offset_bottom = 542.0
+offset_bottom = 581.0
 theme_override_font_sizes/font_size = 64
 text = "JOGAR"
 

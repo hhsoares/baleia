@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://b1fubdrav3781"]
+[gd_scene load_steps=35 format=3 uid="uid://b1fubdrav3781"]
 
 [ext_resource type="Script" uid="uid://r83rrsw150n" path="res://Scripts/jogo.gd" id="1_1untg"]
 [ext_resource type="Texture2D" uid="uid://c8ntm4wyk0c23" path="res://Assets/Ellipse 55.png" id="1_wu4wd"]
@@ -185,6 +185,8 @@ _data = {
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1ojdp"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jxrh3"]
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_srq8g"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kx1ko"]
@@ -208,6 +210,8 @@ size = Vector2(2159.5, 306)
 
 [node name="jogo" type="Node2D"]
 script = ExtResource("1_1untg")
+spawn_every = 0.6
+spawn_above = 18.0
 
 [node name="bgs" type="Node2D" parent="."]
 
@@ -393,6 +397,7 @@ scale = Vector2(1.4, 1.4)
 pivot_offset = Vector2(64, 64)
 theme_override_styles/normal = SubResource("StyleBoxEmpty_1untg")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_1ojdp")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_jxrh3")
 theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_srq8g")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_kx1ko")
 theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_iw17t")

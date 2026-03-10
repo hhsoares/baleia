@@ -11,6 +11,7 @@ const BALL_SCENE := preload("res://prefarbs/bola.tscn")
 @onready var splash: Sprite2D = $bgs/splash
 @onready var baleia: Node2D = $bgs/baleia
 
+@onready var btn_baleia: Button = $HUD/Control/btn_baleia
 
 var _rng := RandomNumberGenerator.new()
 var _t: Timer
@@ -46,7 +47,7 @@ func _on_btn_baleia_pressed() -> void:
 	if not can_use_baleia:
 		return
 	can_use_baleia = false
-	
+	btn_baleia.modulate = Color(0.114, 0.114, 0.114, 1.0)
 	var anim_baleia = baleia.get_node("AnimationPlayer")
 	anim_baleia.play("ta_bravo")
 	
@@ -63,6 +64,7 @@ func _on_btn_baleia_pressed() -> void:
 	
 	await get_tree().create_timer(4.0).timeout
 	can_use_baleia = true
+	btn_baleia.modulate = Color(1.0, 1.0, 1.0, 1.0)
 
 func pause():
 	get_tree().paused = true
